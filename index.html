@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrasi</title>
+
+    <!-- css  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- javascript -->
+    <script src="js/main.js"></script>
+
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="navigation">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link" onclick="openTab(event, 'FormTab')" href="#"
+              >Registrasi</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="openTab(event, 'ListTab')" href="#"
+              >List Pendaftar
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Form  -->
+    <div id="FormTab" class="form-wrap">
+      <div class="form-box registrasi">
+        <h2>Registrasi</h2>
+        <form action="#">
+          <div class="input-box">
+            <input type="text" class="form-control" id="InputNama" placeholder="Minimal 10 karakter"/>
+            <label for="nama" class="form-label">Nama :</label>
+          </div>
+          <div class="input-box">
+            <input type="text" class="form-control" id="InputUmur" placeholder="Minimal 25 Tahun" />
+            <label for="umur" class="form-label">Umur :</label>
+          </div>
+          <div class="input-box">
+            <input type="text" class="form-control" id="InputSangu" placeholder="Minimal Rp. 100.000 - Rp. 1.000.000"/>
+            <label for="sangu" class="form-label">Uang Sangu :</label>
+          </div>
+          <input
+            type="button"
+            class="btn"
+            value="Submit"
+            onclick="tambahData()"
+          />
+        </form>
+      </div>
+    </div>
+
+    <!-- List  -->
+    <div id="ListTab" class="form-wrap">
+      <div class="form-box list">
+        <h2>List</h2>
+        <table id="tabelHasil" class="tabel-list">
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Umur</th>
+              <th>Sangu</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="dataTabel">
+            <!-- Data hasil inputan -->
+          </tbody>
+        </table>
+        <p id="dataResume" class="resume"></p>
+      </div>
+    </div>
+  </body>
+</html>
